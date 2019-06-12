@@ -14,4 +14,4 @@
 sudo apt install libnotify-bin
 ```
 
-When I used Manjaro it was allready installed.
+When I used Manjaro it was already installed.
