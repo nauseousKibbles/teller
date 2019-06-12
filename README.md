@@ -1,17 +1,17 @@
 # Teller for linux
 
-## This is a task reminding program to keep you organized.
+### This is a task reminding program to keep you organized.
 
-## Just launch teller.py
+### Just launch teller.py
 
-## And run notify.py separately to get notified.
+### And run notify.py separately to get notified.
 
-#You need...
+# You need...
 
-## libnotify-bin
+### libnotify-bin
 
 ```
 sudo apt install libnotify-bin
 ```
 
-## When I used Manjaro it was allready installed.
+When I used Manjaro it was allready installed.
