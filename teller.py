@@ -47,11 +47,13 @@ def delTask():
     db.readTable().readAll()
     deledTask = input("What task do you want to delete? ")
     db.editTable().deleteTask(deledTask)
+    reloadScreen()
+    db.readTable().readAll()
     menu()
 
 
 def createStuff():
-    print("To leave just exit.")
+    print("To leave just type Control + C")
     print("How many tasks would you like to create? ")
     amn = input("")
     reloadScreen()
@@ -59,16 +61,19 @@ def createStuff():
         wantTasks = input("What is the task? ")
         reloadScreen()
         wantHour = input("What is the hour? ex. 11, 12, 5. ")
-        try:
-            int(wantHour)
-        except:
+        while wantHour.isdigit() == False:
             print('Try again, but without letters...')
             wantHour = input("What is the hour? ")
+
         while len(wantHour) > 2:
             wantHour = input("Whoops... What is the hour? ex. 12 or 5")
 
         reloadScreen()
+
         wantMin = input("What is the minute? ex. 00, 03, 55. ")
+        while wantMin.isdigit() == False:
+            print('Try again, but without letters...')
+            wantMin = input("What is the minute? ")
 
         reloadScreen()
 
@@ -127,12 +132,14 @@ def menu():
 
     if menuo == "2":
         delTask()
+
     if menuo == "3":
         omeun = input("Are you sure? y/n ")
         reloadScreen()
         if omeun == "y":
             db.editTable().deleteAll()
-            print("del")
+
+            db.readTable().readAll()
             menu()
         menu()
 
