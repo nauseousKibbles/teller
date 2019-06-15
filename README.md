@@ -22,6 +22,8 @@ When I used Manjaro it was already installed.
 
 `python3 teller.py`
 
+Please use Python3.
+
 # Help?
 
 ## Creating the tasks
