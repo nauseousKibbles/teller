@@ -1,8 +1,8 @@
 ﻿# Teller for Linux
 
-### This is a task reminding program to keep you organized.
+### This is a task reminding program to remind you to do stuff.
 
-### And run notify.py separately to get notified.
+### To get notifications, you need to run ‘Warning Mode’ in the menu.
 
 # You need...
 
