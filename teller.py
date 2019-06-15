@@ -129,6 +129,10 @@ def menu():
     menuo = input("")
     reloadScreen()
 
+    if menuo.isdigit() == False:
+        print("Please put in a number. ")
+        menu()
+
     if menuo == "1":
         createStuff()
 
@@ -160,14 +164,31 @@ def menu():
         reloadScreen()
         print(
             "If you need help, please go to the github page. https://github.com/nauseousKibbles/teller")
-        time.sleep(3)
-        print("\n")
-        print("\n")
+
         print("\n")
         menu()
 
-        if menuo == "6":
-            sys.exit()
+    if menuo == "6":
+        sys.exit()
+
+    if menuo == "":
+        reloadScreen()
+        print("Woah, plase put something here...")
+        menu()
+
+    if int(menuo) > 6 and int(menuo) < 100000:
+        reloadScreen()
+        print("Too high.")
+        menu()
+
+    if int(menuo) > 100000:
+        reloadScreen()
+        print("WAY Too high.")
+        time.sleep(0.5)
+        print("What are you thinking?")
+        time.sleep(0.5)
+        print("\n")
+        menu()
 
 
 reloadScreen()
