@@ -1,7 +1,7 @@
 #My items
 *.csv
 .vscode
-
+list.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
