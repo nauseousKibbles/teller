@@ -53,9 +53,11 @@ def delTask():
 
 
 def createStuff():
-    print("To leave just type Control + C")
+    print("To leave just click enter.")
     print("How many tasks would you like to create? ")
     amn = input("")
+    if amn == "":
+        menu()
     reloadScreen()
     for x in range(0, int(amn)):
         wantTasks = input("What is the task? ")
@@ -154,10 +156,15 @@ def menu():
         except KeyboardInterrupt:
             menu()
 
-        if menuo == "5":
-            reloadScreen()
-            print(
-                "The creating tasks option is pretty self explanitory. If you need help, please go to the github page. https://github.com/nauseousKibbles/teller")
+    if menuo == "5":
+        reloadScreen()
+        print(
+            "If you need help, please go to the github page. https://github.com/nauseousKibbles/teller")
+        time.sleep(3)
+        print("\n")
+        print("\n")
+        print("\n")
+        menu()
 
         if menuo == "6":
             sys.exit()

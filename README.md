@@ -22,10 +22,13 @@ When I used Manjaro it was already installed.
 
 `python3 teller.py`
 
-
-
 # Help?
 
 ## Creating the tasks
+
 Type in the hour like this. `12, 1, 8, or 4`
 Type in the minute like this. `00, 14, 05, 57 or 01`
+
+## Warning Mode?
+
+Warning mode is a loop of time checkers to check the time verses what you put to what time it accually is. Steal it if you want. Like you want to...
