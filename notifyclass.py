@@ -3,8 +3,13 @@ import os
 
 
 def notify(mess, extra="Teller Notification"):
-    message = "notify-send " + "'" + str(mess) + "' " + "'" + str(extra) + "'"
-    message.replace("'", "")
-    # print(message)
 
+    cleanMess = str(mess).replace("'", "").replace(
+        "(", "").replace(")", "").replace(",", "")
+
+    message = "notify-send " + "'" + \
+        str(cleanMess) + "' " + "'" + str(extra) + "'"
+    # message.replace("'", "")
+    # print(message)
+    print(cleanMess)
     os.system(message.replace(",", "").replace("(", "").replace(")", ""))
